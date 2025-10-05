@@ -15,10 +15,12 @@ spec:
       labels:
         app: n8n
     spec:
+      securityContext:
+        fsGroup: 1000
       volumes:
         - name: n8n-pv-storage
-          PersistentVolumeClaim:
-            claimName: n8n-pv-claim
+          persistentVolumeClaim:
+            claimName: n8n-pvc
       containers:
       - name: n8n
         image: n8nio/n8n:1.114.2
@@ -27,4 +29,3 @@ spec:
         volumeMounts:
           - mountPath: "/home/node/.n8n"
             name: n8n-pv-storage
-

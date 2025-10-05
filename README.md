@@ -9,3 +9,18 @@ Deployment will be done as per GitOps principles -
 3. Reconciled - ArgoCD will keep the changes in sync between git and kubernetes.
 4. Observability - Will be achieved through ArgoCD dashboard.
 5. PR based Ops - all the changes to the environment will be done through git.
+
+
+
+
+dev - local
+staging - on AWS
+prod - on AWS
+
+
+
+Prerequesites : 
+
+Kubernetes cluster
+Argo CD
+Kustomize
