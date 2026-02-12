@@ -23,7 +23,7 @@ spec:
             claimName: n8n-pvc
       containers:
       - name: n8n
-        image: n8nio/n8n:1.114.2
+        image: n8nio/n8n:2.7.4
         ports:
         - containerPort: 5678
         volumeMounts:
